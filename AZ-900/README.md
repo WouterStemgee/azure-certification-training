@@ -66,7 +66,7 @@
 - Azure Firewall
 - Azure DDoS protection
 
-## Identity, governance, privacy, and compliance features 20-25%)
+## Identity, governance, privacy, and compliance features (20-25%)
 ### Azure identity services
 - Authentication vs. authorization
 - Azure Active Directory
