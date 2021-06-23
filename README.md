@@ -18,3 +18,4 @@ Notes and learning resources collected during my training to become a certified 
 
 ## Azure Certifications Overview
 [![Azure Certifications](img/azure_certifications.png)](img/azure_certifications.png)
+[Source](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wyqh)

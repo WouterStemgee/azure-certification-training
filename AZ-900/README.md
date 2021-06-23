@@ -50,7 +50,7 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-fundamental
 - Azure Monitor
 - Azure Service Health
 
-## 4. General security and network security features (10-15%)
+## [4. General security and network security features (10-15%)](4_General-security-and-network-security-features.md)
 ### 4.1 Azure security features
 - Azure Security Center, policy compliance, security alerts, secure score, resource hygiene
 - Key Vault
