@@ -1,7 +1,7 @@
 # Azure Certification Training
 Notes and learning resources collected during my training to become a certified DevOps Engineer Expert.
 
-## Certification Training Path
+## Training Path
 1. ### [AZ-900: Microsoft Azure Fundamentals](AZ-900)
 2. ### AZ-204: Microsoft Azure Developer
 3. ### AZ-104: Microsoft Azure Administrator
