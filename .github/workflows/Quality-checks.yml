@@ -12,7 +12,6 @@ jobs:
           - npm run lint:md
           - npm run lint:relative-urls
           - npm run lint:external-urls
-          - npm run lint:consistency
     steps:
       - name: Checkout
         uses: actions/checkout@v2
