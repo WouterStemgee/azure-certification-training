@@ -41,9 +41,43 @@
 
 
 ## 3.2 Azure management tools
-### Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, Azure Mobile App
+- Management tools
+    - visual tools: user friendly
+    - code-based tools: used for large deployments of resources with interdependencies and configuration options
+- Infrastructure-as-code
+    - imperative code: describes each individual step to achieve desired outcome
+    - declarative code: describes desired outcome
 
-### Azure Advisor
-### Azure Resource Manager (ARM) templates
-### Azure Monitor
-### Azure Service Health
+### Resource Management: Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, Azure Mobile App, Azure Resource Manager (ARM) templates
+- **Azure Portal**: web-based user interface 
+    - manage services, view reports
+- **Azure PowerShell**: execute _PowerShell cmdlets_
+    - calls Azure Rest API to perform management tasks
+    - cmdlets can be combined into a script
+    - can be run through Azure Cloud Shell
+    - useful for one-off management and administrative tasks
+- **Azure CLI**: executable program that can execute _Bash commands_ to interact with the Azure Rest API
+    - useful if you come from a Linux background
+- **Cloud Shell**: used to run PowerShell cmdlets on Azure
+- **Azure Mobile App**: iOS/Android application
+    - monitor health status of Azure resources, check alerts, diagnose issues, restart apps/VMs
+    - run Azure CLI/PowerShell commands
+- **ARM templates**: describe resources you want to use in a declarative JSON format
+    - benefit: entire ARM template is verified before any code is executed to ensure that resources will be created and connected correctly, resource creation is orchestrated in parallel (all are created at the same time)
+    - desired state and configuration of each resource is defined in the ARM template
+    - can execute Bash/PowerShell scripts before/after resource setup
+    - used for repeatable deployments
+
+### Monitoring: Azure Advisor, Azure Monitor, Azure Service Health
+- **Azure Advisor**: evaluates Azure resources and makes recommendations to help make improvements in reliability, security, performance, operational excellence and costs
+    - available via Azure portal and API
+    - ability to setup notifications to alert for new recommendations
+- **Azure Monitor**: platform for collecting, analyzing, visualizing metric and logging data collected at every layer in the application architecture (Application, OS, Resources, Subscription, Tenant, ...)
+    - Insights: application/container/VM/monitoring solutions
+    - Visualize: dashboards, views, Power BI, workbooks
+    - Analyze: metric analytics, log analytics
+    - Respond: alerts, autoscale
+    - Integrate: Logic Apps, export APIs
+- **Azure Service Health**: personalized view of the health of Azure services, regions and resources
+    - [status.azure.com](status.azure.com) website
+    - service issues, planned maintenance, health advisories, incident reports (root cause analyses/RCAs)
