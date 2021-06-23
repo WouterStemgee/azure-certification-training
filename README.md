@@ -1,5 +1,5 @@
 # Azure Certification Training
-[![Quality checks](https://github.com/WouterStemgee/azure-certification-training/actions/workflows/Quality-checks.yml/badge.svg?branch=main)](https://github.com/WouterStemgee/azure-certification-training/actions/workflows/Quality-checks.yml)
+[![Quality checks](https://github.com/WouterStemgee/azure-certification-training/actions/workflows/Quality-checks.yml/badge.svg)](https://github.com/WouterStemgee/azure-certification-training/actions/workflows/Quality-checks.yml)
 [![GitHub](https://img.shields.io/github/license/WouterStemgee/azure-certification-training)](LICENSE)
 
 Notes and learning resources collected during my training to become a certified DevOps Engineer Expert.
