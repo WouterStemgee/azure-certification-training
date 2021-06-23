@@ -13,4 +13,4 @@ Notes and learning resources collected during my training to become a certified 
 - [Microsoft Learn: Azure Fundamentals - Learning Path: part 1-6](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
 
 ## Azure Certifications Overview
-![Azure Certifications](img/azure_certifications.png)
+[![Azure Certifications](img/azure_certifications.png)](img/azure_certifications.png)
