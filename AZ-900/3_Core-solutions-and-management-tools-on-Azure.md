@@ -79,5 +79,5 @@
     - Respond: alerts, autoscale
     - Integrate: Logic Apps, export APIs
 - **Azure Service Health**: personalized view of the health of Azure services, regions and resources
-    - [status.azure.com](status.azure.com) website
+    - [status.azure.com](http://status.azure.com) website
     - service issues, planned maintenance, health advisories, incident reports (root cause analyses/RCAs)
