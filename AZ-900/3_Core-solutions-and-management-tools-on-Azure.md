@@ -41,8 +41,9 @@
 
 
 ## 3.2 Azure management tools
-- Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, Azure Mobile App
-- Azure Advisor
-- Azure Resource Manager (ARM) templates
-- Azure Monitor
-- Azure Service Health
+### Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, Azure Mobile App
+
+### Azure Advisor
+### Azure Resource Manager (ARM) templates
+### Azure Monitor
+### Azure Service Health
