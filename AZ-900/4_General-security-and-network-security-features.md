@@ -155,7 +155,7 @@
 - Access webserver
     - get VM IP address: `az vm list-ip-addresses`
     - store IP address in local variable:
-        ```
+        ```bash
         IPADDRESS="$(az vm list-ip-addresses \
         --resource-group <rg> \
         --name my-vm \
@@ -164,14 +164,14 @@
         ```
     - create network security group rule: allow inbound access on port 80 (HTTP)
         - show list of NSG associated with the VM
-            ```
+            ```bash
             az network nsg list \
             --resource-group <rg> \
             --query '[].name' \
             --output tsv
             ```
         - show list of associated rules of the NSG associated with the VM
-            ```
+            ```bash
             az network nsg rule list \
             --resource-group <rg> \
             --nsg-name my-vmNSG \
@@ -184,7 +184,7 @@
             default-allow-ssh  1000        22      Allow
             ```
         - create new NSG rule for inbound HTTP traffic on port 80
-            ```
+            ```bash
             az network nsg rule create \
             --resource-group <rg> \
             --nsg-name my-vmNSG \
@@ -194,7 +194,7 @@
             --destination-port-ranges 80 \
             --access Allow
             ```
-            ```
+            ```bash
             Name               Priority    Port    Access
             -----------------  ----------  ------  --------
             default-allow-ssh  1000        22      Allow
@@ -202,6 +202,6 @@
             ```
     - access website: `curl --connect-timeout 5 http://$IPADDRESS`
         - output:
-            ```
+            ```bash
             <html><body><h2>Welcome to Azure! My name is my-vm.</h2></body></html>
             ```
