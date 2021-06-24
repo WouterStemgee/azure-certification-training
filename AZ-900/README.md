@@ -63,7 +63,7 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-fundamental
 - Azure Firewall
 - Azure DDoS protection
 
-## 5. Identity, governance, privacy, and compliance features (20-25%)
+## [5. Identity, governance, privacy, and compliance features (20-25%)](5_Identity-governance-privacy-and-compliance-features.md)
 ### 5.1 Azure identity services
 - Authentication vs. authorization
 - Azure Active Directory
