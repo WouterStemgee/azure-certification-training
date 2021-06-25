@@ -1,7 +1,7 @@
 # AZ-900: Microsoft Azure Fundamentals
 Certification exam: [skills measured](docs/microsoft-certified-azure-fundamentals-skills-measured.pdf)
 
-## 1. Cloud Concepts (20-25%)
+## [1. Cloud Concepts (20-25%)](1_Core-Azure-concepts.md)
 ### 1.1 Benefits & Considerations of using cloud services
 - Benefits of cloud computing
 - Capital Expenditure (CapEx) vs. Operational Expenditure (OpEx)
@@ -18,7 +18,7 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-fundamental
 - Public, Private, Hybrid cloud
 - Exercise: compare and contrast the 3 types of cloud computing
 
-## 2. Cloud Azure Services (15-20%)
+## [2. Cloud Azure Services (15-20%)](2_Core-Azure-services.md)
 ### 2.1 Core Azure Services
 - Regions and Region Pairs
 - Availability Zones
