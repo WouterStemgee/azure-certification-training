@@ -5,8 +5,6 @@
 - **IoT Central**: dashboard/UI build on top of IoT Hub
 - **Azure Sphere**: focussed on adding end-to-end security on top of IoT Central
 
-### Azure Synapse Analytics, HDInsight, Azure Databricks
-
 ### Azure Machine Learning, Cognitive Services, Azure Bot Service
 - **Azure Machine Learning**: flexible experimentation tools/services to train/test/deploy models to predict future outcomes using your own datasets
 - Azure Cognitive Services: prebuilt general purpose machine learning models for NLP (Language, Speech, Vision, Decision)
