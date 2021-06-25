@@ -33,12 +33,12 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-fundamental
 - Virtual Networks, VPN Gateway, Virtual Network peering, ExpressRoute
 - Container (Blob) Storage, Disk Storage, File Storage, storage tiers
 - Cosmos DB, Azure SQL Database, Azure Database for MySQL, Azure Database for PostgreSQL, SQL Managed Instance
+- Azure Synapse Analytics, HDInsight, Azure Databricks
 - Azure Marketplace
 
 ## [3. Core solutions and management tools on Azure (10-15%)](3_Core-solutions-and-management-tools-on-Azure.md)
 ### 3.1 Core solutions available in Azure
 - IoT Hub, IoT Central, Azure Sphere
-- Azure Synapse Analytics, HDInsight, Azure Databricks
 - Azure Machine Learning, Cognitive Services, Azure Bot Service
 - Azure Functions, Logic Apps
 - Azure DevOps, GitHub Actions, Azure DevTest Labs
