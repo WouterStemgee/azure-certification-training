@@ -76,7 +76,7 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-fundamental
 - Azure compliance documentation
 - Azure Sovereign Regions (Azure Government cloud services and Azure China cloud services)
 
-## 6. Azure Cost Management, SLA (10-15%)
+## [6. Azure Cost Management, SLA (10-15%)](6_Azure-cost-management.md)
 ### 6.1 Methods for planning and managing costs
 - Factors that can affect costs (resource type, services, locations, ingress & egress traffic)
 - Factors that can reduce costs (reserved instances, reserved capacity, hybrid use benefit, spot pricing)
