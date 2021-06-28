@@ -51,7 +51,6 @@
         - provided in Azure Active Directory and Office 365
 - Single Sign-On (SSO)
     - enables a user to sign in one time and use that credential to access multiple resources/applications from different providers
-
 ## 5.2 Governance, Privacy and compliance features
 ###  Cloud Adoption Framework for Azure
 - Cloud Adoption Framework
@@ -112,16 +111,109 @@
         - Resource group
         - Single resource
     - roles
-        - Owner user in management group scope: manage everything in all subscriptions within the management group
-        - Reader in subscription scope: view every resource group/resource within subscription
-        - Contributor in resource group scope:manage resources of all types within that resource group, but not other resource groups within the subscription
+        - **Owner** user in management group scope: manage everything in all subscriptions within the management group
+        - **Reader** in subscription scope: view every resource group/resource within subscription
+        - **Contributor** in resource group scope: manage resources of all types within that resource group, but not other resource groups within the subscription
 - "Allow model"
     - assigned roles allows you to perform certain actions (read/write/delete)
 - Managing Azure RBAC permissions
     - Access control (IAM) pane in Azure portal
 
-### Microsoft core tenets of Security, Privacy and Compliance
+### Resource Locks
+- **Resource lock**: prevents resources from being accidentally deleted or changed
+    - **CanNotDelete** 
+    - **ReadOnly** 
+
+### Resource Tagging
+- Extra **metadata** for organizing resources
+    - Resource management
+    - Cost management and optimization
+    - Operations management
+    - Security
+    - Governance and regulatory compliance
+    - Workload optimization and automation
+- Example: tagging structure
+    - AppName: name of the application that the resource is part o
+    - CostCenter: internal cost center code
+    - Owner: name of the business owner who's responsible for the resource
+    - Environment: environment name, such as "Prod," "Dev," or "Test"
+    - Impact: important the resource is to business operations, such as "Mission-critical", "High-impact", or "Low-impact"
+
+### Azure Policy
+- **Azure Policy**: enables you to create, assign, and manage policies that control or audit your resources
+    - define both individual policies and groups of related policies (**initiatives**)
+    - comes with a number of built-in policy and initiative definitions
+        - example: policy that allows only a certain stock-keeping unit (SKU) size of virtual machines (VMs) to be used in your environment
+    - Azure Policy can automatically remediate noncompliant resources and configurations to ensure the integrity of the state of the resources
+        - example: if all resources in a certain resource group should be tagged with the "AppName" tag and a value of "SpecialOrders", Azure Policy can automatically reapply that tag if it has been removed
+    - integrates with Azure DevOps by applying any **continuous integration and delivery pipeline policies** that apply to the pre-deployment and post-deployment phases of your applications
+- Usage:
+    1. Create a policy definition
+        - examples:
+            - Allowed virtual machine SKUs
+            - Allowed locations
+            - MFA should be enabled on accounts with write permissions on your subscription
+            - CORS should not allow every resource to access your web applications
+            - System updates should be installed on your machines
+    2. Assign the definition to resources
+    3. Review the evaluation results.
+- **Azure Policy initiatives**: grouping related policies into one set
+    - example initiative: monitor all of the available security recommendations for all Azure resource types in Azure Security Center
+        - Under this initiative, the following policy definitions are included
+            - Monitor unencrypted SQL Database in Security Center
+            - Monitor OS vulnerabilities in Security Center
+            - Monitor missing Endpoint Protection in Security Center
+
+### Azure Blueprints
+- **Azure Blueprints**: define a repeatable set of governance tools and standard Azure resources that your organization requires
+    - usable across multiple subscriptions
+    - orchestrates the deployment of various resource templates and other artifacts, such as:
+        - Role assignments
+        - Policy assignments
+        - Azure Resource Manager templates
+        - Resource groups
+    - usage: 
+        1. Create an Azure blueprint
+        2. Assign the blueprint
+        3. Track the blueprint assignments
+    - **blueprint artifacts**: each component in the blueprint definition is known as an artifact
+
+## Microsoft core tenets of Security, Privacy and Compliance
+- Compliance categories available on Azure
+
+![](img/compliance-matrix.png)
+
 ### Microsoft Privacy Statement, Product Term site, Data Protection Addendum (DPA)
+- **Data Protection Addendum** (DPA): defines the data processing and security terms for online services
+    - Compliance with laws
+    - Disclosure of processed data
+    - Data Security, which includes security practices and policies, data encryption, data access, customer responsibilities, and compliance with auditing
+    - Data transfer, retention, and deletion
+- **Microsoft Privacy Statement**: explains what personal data Microsoft collects, how Microsoft uses it, and for what purposes
+- **Online Services Terms**: legal agreement between Microsoft and the customer
+
+[Licensing Terms and Documentation Search](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx)
 ### Trust Center
+- **Trust Center**: showcases Microsoft's principles for maintaining data integrity in the cloud and how Microsoft implements and supports security, privacy, compliance, and transparency in all Microsoft cloud products and services
+    - In-depth information about security, privacy, compliance offerings, policies, features, and practices across Microsoft cloud products
+    - Additional resources for each topic
+    - Links to the security, privacy, and compliance blogs and upcoming events
+
+[Trust Center](https://www.microsoft.com/nl-be/trust-center)
 ### Azure compliance documentation
+- access detailed documentation about legal and regulatory standards and compliance on Azure
+- compliance offerings categories:
+    - Global
+    - US government
+    - Financial services
+    - Health
+    - Media and manufacturing
+    - Regional
+
+[Azure compliance documentation](https://docs.microsoft.com/en-us/azure/compliance/)
 ### Azure Sovereign Regions (Azure Government cloud services and Azure China cloud services)
+- **Azure Government**: separate instance of the Microsoft Azure service
+    - addresses the security and compliance needs of US federal agencies, state and local governments, and their solution providers
+    - offers physical isolation from non-US government deployments and provides screened US personnel
+- **Azure China 21Vianet**: physically separated instance of cloud services located in China
+    -  independently operated and transacted by Shanghai Blue Cloud Technology Co., Ltd. ("21Vianet")
