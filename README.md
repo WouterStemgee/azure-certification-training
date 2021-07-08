@@ -6,8 +6,8 @@ Notes and learning resources collected during my training to become a certified 
 
 
 ## Training Path
-1. ### [AZ-900: Microsoft Azure Fundamentals](AZ-900)
-2. ### AZ-204: Microsoft Azure Developer
+1. ### [AZ-900: Microsoft Azure Fundamentals](AZ-900/)
+2. ### [AZ-204: Microsoft Azure Developer](AZ-204/)
 3. ### AZ-104: Microsoft Azure Administrator
 4. ### AZ-400: Designing and Implementing Microsoft DevOps Solutions
 5. ### AZ-303: Microsoft Azure Architect Technologies
@@ -15,6 +15,7 @@ Notes and learning resources collected during my training to become a certified 
 
 ## Learning Resources
 - [Microsoft Learn: Azure Fundamentals - Learning Path: part 1-6](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
+- [Microsoft Learn: Azure Developer - Learning Path: part 1-7](https://docs.microsoft.com/en-us/learn/certifications/azure-developer/)
 
 ## Azure Certifications Overview
 [![Azure Certifications](img/azure_certifications.png)](img/azure_certifications.png)
