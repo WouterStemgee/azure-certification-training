@@ -1,7 +1,7 @@
 # AZ-204: Developing Solutions for Microsoft Azure
 Certification exam: [skills measured](docs/microsoft-certified-azure-developer-associate-skills-measured.pdf)
 
-## [1. Develop Azure compute solutions (25-30%)](Azure-compute-solutions.md)
+## [1. Develop Azure compute solutions (25-30%)](1_Azure-compute-solutions.md)
 ### 1.1 Implement IaaS solutions
 - provision virtual machines (VMs)
 - configure, validate, and deploy ARM templates
