@@ -13,8 +13,7 @@ Certification exam: [skills measured](docs/microsoft-certified-azure-developer-a
 - enable diagnostics logging
 - deploy code to a web app
 - configure web app settings including SSL, API settings, and connection strings
-- implement autoscaling rules including scheduled autoscaling and autoscaling by
-operational or system metrics
+- implement autoscaling rules including scheduled autoscaling and autoscaling by operational or system metrics
 ### 1.3 Implement Azure functions
 - create and deploy Azure Functions apps
 - implement input and output bindings for a function
