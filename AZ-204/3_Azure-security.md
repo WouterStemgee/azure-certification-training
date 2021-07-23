@@ -382,16 +382,154 @@
                 - `ng build --prod`
             - Update config files with website callback URI
     - Control access to your protected API using App Roles and Security Groups
-        - App Roles
-        - Security Groups
+        - **App Roles**
+            - Register API service app, add scope (see above)
+            - Register SPA service app
+            - Define application roles
+                - Azure Portal > Azure Active Directory > App Registrations > select API app
+                    - App roles > Create app role: enter Display Name, Allowed member type (users/groups), Value, Description > Apply
+            - Assign users and groups to app roles
+                - Azure Portal > Azure Active Directory > Enterprise Applications
+                - Manage > All applications > select API app
+                - Manage > Users and groups > Add user/groups > Add Assignment panel
+                    - Select user
+                    - Select role
+                    - "Assign"
+            - Configure API service app and SPA service app to use the app registrations (see above)
+        - **Security Groups**
     - Develop and provision a multi-tenant SaaS application
     - Advanced scenarios
 
 ### create and implement shared access signatures
+- Shared access signature (SAS): secure delegated access to resources in your storage account
+    - granular control over how a client can access your data
+    - ![](img/sas-storage-uri.png)
+- Types
+    - User delegation SAS
+        - secured with Azure Active Directory (Azure AD) credentials 
+        - specify permissions for the SAS
+        - applies to Blob storage only
+    - Service SAS
+        - secured with storage account key
+        - delegates access to a resource in one of the Azure Storage services: Blob storage, Queue storage, Table storage, Azure Files
+    - Account SAS
+        - secured with storage account key
+        - delegates access to resources in one or more of the storage services
+        - all of the operations available via a service or user delegation SAS are also available via an account SAS
+- Create a user delegation SAS for a container or blob
+    - Assign permissions with Azure RBAC
+    ```ps
+    New-AzRoleAssignment 
+        -SignInName <email> `
+        -RoleDefinitionName "Storage Blob Data Contributor" `
+        -Scope  "/subscriptions/<subscription>/resourceGroups/<resource-group>/providers/Microsoft.Storage/storageAccounts/<storage-account>"
+    ```
+    - Use Azure AD credentials to secure a SAS: `-UseConnectedAccount `
+    ```ps
+    $ctx = New-AzStorageContext -StorageAccountName <storage-account> -UseConnectedAccount
+    ```
+    - Create a user delegation SAS for a container
+    ```ps
+    New-AzStorageContainerSASToken 
+        -Context $ctx `
+        -Name <container> `
+        -Permission racwdl `
+        -ExpiryTime <date-time>
+    ```
 
 ## 3.2 Implement secure cloud solutions
-### secure app configuration data by using App Configuration Azure Key Vault
+### secure app configuration data by using App Configuration and Azure Key Vault
+![](img/appconfig-azure.png)
+
+1. The application sends an **authentication reques**t during debugging in Visual Studio, or authenticates via the MSI (Managed Service Identity) in Azure.
+2. Upon successful authentication, Azure AD returns an **access token**.
+3. The App Configuration SDK sends a request with the access token to read the app's **App Configuration KeyVault secretURI** value for the app's key vault.
+4. Upon successful authorization, App Configuration sends the **configuration value**.
+5. Using the sign-in identity, the app sends a request to Azure Key Vault to **retrieve the application secret** for the secretURI that App Configuration sent.
+6. Upon successful authorization, Key Vault returns the **secret value**.
+
+- use a different key vault for each application in each environment
+    - helps prevent sharing secrets across environments, and reduces the threat in case of a breach
+- the sign-in identity must have the **App Configuration Data Reader role** in the App Configuration resource, and have explicit access policies for retrieving the secrets in Azure Key Vault
 
 ### develop code that uses keys, secrets, and certificates stored in Azure Key Vault
+- local development: **Secret Manager**
+    - App project file:
+        ```xml
+        <PropertyGroup>
+            <UserSecretsId>{GUID}</UserSecretsId>
+        </PropertyGroup>
+        ```
+    - Set secrets: `dotnet user-secrets set "{SECRET NAME}" "{SECRET VALUE}"`
+- production environment: **Azure Key Vault**
+    - Authenticate and create a client
+        ```cs
+        var keyVaultName = Environment.GetEnvironmentVariable("KEY_VAULT_NAME");
+        var kvUri = "https://" + keyVaultName + ".vault.azure.net";
+
+        var client = new KeyClient(new Uri(kvUri), new DefaultAzureCredential());
+        var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
+        var client = new CertificateClient(new Uri(kvUri), new DefaultAzureCredential());
+        ```
+    - **Keys**
+        - Save a key
+            ```cs
+            var key = await client.CreateKeyAsync("myKey", KeyType.Rsa);
+            ```
+        - Retrieve a key
+            ```cs
+            var key = await client.GetKeyAsync("myKey");
+            ```
+        - Delete a key
+            ```cs
+            var operation = await client.StartDeleteKeyAsync("myKey");
+
+            // You only need to wait for completion if you want to purge or recover the key.
+            await operation.WaitForCompletionAsync();
+
+            var key = operation.Value;
+            await client.PurgeDeletedKeyAsync("myKey");
+            ```
+    - **Secrets**
+        - Save a secret
+            ```cs
+            await client.SetSecretAsync(secretName, secretValue);
+            ```
+        - Retrieve a secret
+            ```cs
+           var secret = await client.GetSecretAsync(secretName);
+            ```
+        - Delete a secret
+            ```cs
+            var operation = await client.StartDeleteSecretAsync("mySecret");
+            // You only need to wait for completion if you want to purge or recover the key.
+            await operation.WaitForCompletionAsync();
+
+            await client.PurgeDeletedKeyAsync("mySecret");
+            ```
+    - **Certificates**
+        - Save a certificate (self-signed certificate with default issuance policy)
+            ```cs
+            var operation = await client.StartCreateCertificateAsync("myCertificate", CertificatePolicy.Default);
+            var certificate = await operation.WaitForCompletionAsync();
+            ```
+        - Retrieve a certificate
+            ```cs
+           var certificate = await client.GetCertificateAsync("myCertificate");
+            ```
+        - Delete a certificate
+            ```cs
+            var operation = await client.StartDeleteCertificateAsync("myCertificate");
+
+            // You only need to wait for completion if you want to purge or recover the certificate.
+            await operation.WaitForCompletionAsync();
+
+            var certificate = operation.Value;
+            await client.PurgeDeletedCertificateAsync("myCertificate");
+            ```
+- Non-Azure-hosted apps: Use **Application ID** and **X.509 certificate**
+- Azure-hosted apps: use **Managed identities for Azure resources**
 
 ### implement solutions that interact with Microsoft Graph
+![](img/microsoft-graph.png)
+See [3.1]()

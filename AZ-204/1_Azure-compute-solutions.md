@@ -60,6 +60,10 @@
         - modify on local machine
     4. "Add to library"
         - stored in Azure
+- PowerShell: Download the template from a specified resource group using PowerShell
+    ```ps
+    Export-AzResourceGroup -ResourceGroupName "myResourceGroup" -Path "C:\users\public\downloads"
+    ```
 
 ### configure container images for solutions
 - docker: [docs](https://docs.docker.com/engine/reference/builder/)
