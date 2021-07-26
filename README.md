@@ -11,7 +11,7 @@ Notes and learning resources collected during my training to become a certified 
 3. ### AZ-104: Microsoft Azure Administrator
 4. ### AZ-400: Designing and Implementing Microsoft DevOps Solutions
 5. ### AZ-303: Microsoft Azure Architect Technologies
-6. ### AZ-304: Microsoft Azure Architect Design
+6. ### [AZ-304: Microsoft Azure Architect Design](AZ-304/)
 
 ## Learning Resources
 - [Microsoft Learn: Azure Fundamentals - Learning Path: part 1-6](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
