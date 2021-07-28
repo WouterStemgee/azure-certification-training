@@ -4,9 +4,7 @@
 ### recommend a solution for authentication
 ### recommend a solution for Conditional Access, including multi-factor authentication
 ### recommend a solution for network access authentication
-### recommend a solution for a hybrid identity including Azure AD Connect and Azure AD
-
-## 2.2 Connect Health
+### recommend a solution for a hybrid identity including Azure AD Connect, Azure AD Connect cloud sync and Azure AD Connect Health
 ### recommend a solution for user self-service
 ### recommend and implement a solution for B2B integration
 

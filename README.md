@@ -14,8 +14,9 @@ Notes and learning resources collected during my training to become a certified 
 6. ### [AZ-304: Microsoft Azure Architect Design](AZ-304/)
 
 ## Learning Resources
-- [Microsoft Learn: Azure Fundamentals - Learning Path: part 1-6](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
-- [Microsoft Learn: Azure Developer - Learning Path: part 1-7](https://docs.microsoft.com/en-us/learn/certifications/azure-developer/)
+- [Microsoft Learn: Azure Fundamentals - Learning Paths](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
+- [Microsoft Learn: Azure Developer - Learning Paths](https://docs.microsoft.com/en-us/learn/certifications/azure-developer/)
+- [Course AZ-304T00-A: Microsoft Azure Architect Design](https://docs.microsoft.com/en-us/learn/certifications/courses/az-304t00)
 
 ## Azure Certifications Overview
 [![Azure Certifications](img/azure_certifications.png)](img/azure_certifications.png)
