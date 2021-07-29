@@ -17,6 +17,7 @@ Notes and learning resources collected during my training to become a certified 
 - [Microsoft Learn: Azure Fundamentals - Learning Paths](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
 - [Microsoft Learn: Azure Developer - Learning Paths](https://docs.microsoft.com/en-us/learn/certifications/azure-developer/)
 - [Course AZ-304T00-A: Microsoft Azure Architect Design](https://docs.microsoft.com/en-us/learn/certifications/courses/az-304t00)
+- [ESI Exam Prep sessions study guides](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hyda)
 
 ## Azure Certifications Overview
 [![Azure Certifications](img/azure_certifications.png)](img/azure_certifications.png)

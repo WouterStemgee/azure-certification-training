@@ -163,3 +163,28 @@
     - logs
     - diagnostic settings: send logs/metric to other monitoring services
 - Log Analytics Workspace
+
+## M10. Design a Solution for Backup and Recovery
+- https://docs.microsoft.com/en-us/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering
+- https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/disaster-recovery-enterprise-scale-dr
+
+## M11. Design for High Availability
+- https://docs.microsoft.com/en-us/azure/virtual-machines/co-location
+- https://github.com/microsoft/MCW
+
+## Workshop: Building a resilient IaaS architecture
+[Case: Building a resilient IaaS architecture](docs/exam-az-304-microsoft-azure-architect-design-skills-measured.pdf)
+
+## M12. Design for Cost Optimization
+
+## M13. Design an Application Architecture
+- Service Fabric
+    ![](img/service-fabric-architecture.png)
+
+## M14. Design Security for Applications
+- System-Assigned Managed identity and Azure VMs
+    - ![](img/system-managed-identity.png)
+
+## Other Workshops
+- https://github.com/microsoft/MCW-Enterprise-class-networking/blob/master/Whiteboard%20design%20session/WDS%20student%20guide%20-%20Enterprise-class%20networking%20in%20Azure.md
+- https://github.com/microsoft/MCW-Hybrid-identity/blob/main/Whiteboard%20design%20session/WDS%20student%20guide%20-%20Hybrid%20identity.md
