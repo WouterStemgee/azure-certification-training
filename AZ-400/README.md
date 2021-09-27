@@ -1,4 +1,6 @@
 # AZ-400: Designing and Implementing Microsoft DevOps Solutions
+Certification exam: [skills measured](docs/exam-az-400-designing-and-implementing-microsoft-devops-solutions-skills-measured.pdf)
+
 ## 1. Develop an Instrumentation Strategy (5-10%)
 ### 1.1. Design and implement logging
 - assess and configure a log framework
@@ -56,8 +58,7 @@
 - automate dependencies scanning for security (container scanning, OWASP)
 - automate dependencies scanning for compliance (licenses: MIT, GPL)
 - assess and report risks
-- design a source code compliance solution (e.g., GitHub Code scanning, GitHub Secret
-scanning, pipeline-based scans, Git hooks, SonarQube, Dependabot, etc.)
+- design a source code compliance solution (e.g., GitHub Code scanning, GitHub Secret scanning, pipeline-based scans, Git hooks, SonarQube, Dependabot, etc.)
 ### 3.4. Design governance enforcement mechanisms
 - implement Azure policies to enforce organizational requirements
 - implement container scanning (e.g., static scanning, malware, crypto mining)
